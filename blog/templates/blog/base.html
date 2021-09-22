@@ -11,7 +11,12 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
 
     <!-- Latest compiled and minified CSS for FontAwesome Icons -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
 
     <!-- Medium Style Editor (to be removed later)-->
     <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
@@ -118,8 +123,8 @@
                 aria-current="page"
                 href="{% url 'login' %}"
               >
-                  <i class="fas fa-sign-in-alt"></i>
                 <span>
+                  <i class="fas fa-sign-in-alt"></i>
                 </span>
               </a>
             </li>
@@ -128,6 +133,7 @@
         </div>
       </div>
     </nav>
-    {% block body_block %} {% endblock %}
+
+    <div class="container">{% block body_block %} {% endblock %}</div>
   </body>
 </html>
