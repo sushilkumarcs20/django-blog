@@ -7,7 +7,7 @@
 {% if post.published_date %}
   <div class="date">{{post.published_date}}</div>
 {% else %}
-  <a href="{% url 'post_publish' pk=post.pk %}" class="btn btn-default">
+  <a href="{% url 'post_publish' pk=post.pk %}" class="btn btn-primary">
     Publish
   </a>
 {% endif %}
@@ -32,8 +32,8 @@
     {% if user.is_authenticated or comment.approved_comment %}
       {{comment.created_date}} 
       {% if not comment.approved_comment %}
-        <a class="btn btn-warning" href="{% url 'comment_remove' pk=comment.pk %}">
-          <span> <i class="fas fa-edit"></i> </span>
+        <a class="btn btn-danger" href="{% url 'comment_remove' pk=comment.pk %}">
+          <span> <i class="fas fa-trash-alt"></i> </span>
         </a>
         <a href="{% url 'comment_approve' pk=comment.pk %}" class="btn btn-success">
           <span>

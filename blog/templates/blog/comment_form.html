@@ -2,10 +2,7 @@
 <h1>New Comment</h1>
 <form method="POST">
   {% csrf_token %}
-  <input type="submit" value="Post Comment" class="btn btn-default" />
+  {{ form.as_p }}
+  <input type="submit" value="Post Comment" class="btn btn-primary" />
 </form>
-
-<script>
-  let editor = new MediumEditor(".editable");
-</script>
 {% endblock %}
